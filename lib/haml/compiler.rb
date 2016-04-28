@@ -1,6 +1,7 @@
 # taken and modified from: https://github.com/redgetan/rails_panel/tree/views_with_line_number
 # with credits to redgetan
 
+require 'haml/compiler'
 module Haml
   class Compiler
 
