@@ -1,5 +1,5 @@
 require "haml_source_line/version"
-require "haml/compiler"
+require_relative "haml/compiler"
 
 module HamlSourceLine
 end

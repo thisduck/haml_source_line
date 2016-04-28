@@ -9,8 +9,9 @@ module Haml
     def compile(node)
       if node.type == :tag
         file = @options[:filename]
-        if defined?(Rails)
-          file.gsub!(Rails.root, "")
+        if defined?(::Rails)
+          file.gsub!(::Rails.root.to_s, "")
+          file.gsub!(/^\//, "")
         end
 
         node.value.attributes.merge!(:data => { :source_line => "#{file}:#{node.line}" })
